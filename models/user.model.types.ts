@@ -1,12 +1,12 @@
-import mongoose, { Model, Types } from "mongoose";
+import { Model, Types } from "mongoose";
 
-export interface IPasswordChange extends mongoose.Document {
+export interface IPasswordChange {
   changedAt: Date;
   resetToken: string | undefined;
   resetTokenExpiresIn: Date | undefined;
 }
 
-export interface IUser extends mongoose.Document {
+export interface IUser {
   _id: Types.ObjectId;
   name: string;
   email: string;
