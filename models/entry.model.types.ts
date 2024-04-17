@@ -1,11 +1,11 @@
-import { Types } from "mongoose";
+import mongoose, { Types } from "mongoose";
 
-export interface ISingleEntry {
+export interface ISingleEntry extends mongoose.Document {
   accountNo: string;
   amount: number;
 }
 
-export interface IEntry {
+export interface IEntry extends mongoose.Document {
   _id: Types.ObjectId;
   debit: ISingleEntry;
   credit: ISingleEntry;
